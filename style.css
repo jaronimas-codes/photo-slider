@@ -1,0 +1,146 @@
+@import "reset.css";
+
+:root {
+  --clr-dark-blue: hsl(240, 38%, 20%);
+  --clr-grayish-blue: hsl(240, 18%, 77%);
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  /* font-size: 100%; */
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-image: url(./images/pattern-curve.svg);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 80%;
+}
+
+.slide-main {
+  display: flex;
+  max-width: 330px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.photo-wrap {
+  background-image: url(./images/pattern-bg.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.img {
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.navigation {
+  position: absolute;
+  bottom: -3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 0.7rem 1rem 0.7rem 1rem;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.nav {
+  cursor: pointer;
+}
+
+.prev {
+  padding-right: 1.5rem;
+}
+
+.para {
+  color: var(--clr-dark-blue);
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 120%;
+  font-weight: 300;
+  background-image: url(./images/pattern-quotes.svg);
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: 50% 0%;
+  padding: 1.5rem 0 1rem 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  color: var(--clr-dark-blue);
+  font-weight: 700;
+}
+
+.prof {
+  font-weight: 300;
+  color: var(--clr-grayish-blue);
+}
+
+@media screen and (min-width: 500px) {
+  .para {
+    font-size: 130%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .slide-main {
+    max-width: 80%;
+    align-items: center;
+    flex-direction: row;
+    padding: 1rem;
+  }
+  .photo-wrap {
+    order: 1;
+    width: 200%;
+    max-width: 450px;
+  }
+
+  .navigation {
+    left: 35%;
+  }
+
+  .info {
+    flex-direction: row;
+    justify-content: left;
+  }
+
+  .name {
+    margin-right: 1rem;
+  }
+
+  .para {
+    background-position: 35% 0%;
+    text-align: left;
+    font-size: 140%;
+  }
+
+  .text {
+    transform: translateX(5rem);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .para {
+    font-size: 200%;
+  }
+}
